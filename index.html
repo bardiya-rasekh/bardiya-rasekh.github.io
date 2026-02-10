@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bardiya (Brad) | AI/ML Engineer</title>
+  <meta name="description" content="AI/ML Engineer with 6+ years of experience in machine learning, computer vision, and generative AI.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bodyColor: '#0A192F',
+            textGreen: '#64ffda',
+            textLight: '#ccd6f6',
+            textDark: '#8892b0',
+            hoverColor: 'rgba(100, 255, 218, 0.1)',
+            cardBg: '#112240',
+          },
+          fontFamily: {
+            body: ['Montserrat', 'sans-serif'],
+            title: ['Inter', 'sans-serif'],
+            code: ['Fira Code', 'monospace'],
+          },
+          maxWidth: {
+            'content': '1140px',
+            'container': '1024px',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .active { color: #64ffda; }
+    .nav-link:hover { color: #64ffda; }
+  </style>
+</head>
+<body class="bg-bodyColor font-body text-textLight antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full bg-bodyColor/95 backdrop-blur-sm px-4 shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between py-4 font-title">
+      <a href="#home" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <div class="h-10 w-10 rounded-full bg-textGreen/20 flex items-center justify-center">
+          <i data-lucide="cpu" class="w-5 h-5 text-textGreen"></i>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" class="nav-link text-[13px] font-medium text-textDark transition-colors">01. About</a>
+        <a href="#experience" class="nav-link text-[13px] font-medium text-textDark transition-colors">02. Experience</a>
+        <a href="#projects" class="nav-link text-[13px] font-medium text-textDark transition-colors">03. Projects</a>
+        <a href="#contact" class="nav-link text-[13px] font-medium text-textDark transition-colors">04. Contact</a>
+        <a href="Bardiya-Brad-Resume.pdf" download class="rounded-md border border-textGreen px-4 py-2 text-[13px] text-textGreen transition-colors hover:bg-hoverColor">Resume</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 text-textGreen" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-40">
+      <div class="absolute inset-0 bg-black/50" id="menu-backdrop"></div>
+      <div class="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-cardBg p-8 flex flex-col">
+        <button id="menu-close" class="self-end p-2 text-textGreen hover:text-textLight">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <div class="flex flex-col gap-6 pt-8">
+          <a href="#about" class="nav-link text-lg text-textDark hover:text-textGreen">01. About</a>
+          <a href="#experience" class="nav-link text-lg text-textDark hover:text-textGreen">02. Experience</a>
+          <a href="#projects" class="nav-link text-lg text-textDark hover:text-textGreen">03. Projects</a>
+          <a href="#contact" class="nav-link text-lg text-textDark hover:text-textGreen">04. Contact</a>
+          <a href="Bardiya-Brad-Resume.pdf" download class="mt-4 rounded-md border border-textGreen px-4 py-2 text-center text-textGreen hover:bg-hoverColor">Resume</a>
+        </div>
+        <div class="mt-auto flex gap-4 pt-8">
+          <!-- Update these URLs with your actual GitHub and LinkedIn profiles -->
+        <a href="https://github.com" target="_blank" rel="noreferrer" class="text-textDark hover:text-textGreen transition-colors">
+            <i data-lucide="github" class="w-6 h-6"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="text-textDark hover:text-textGreen transition-colors">
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </a>
+          <a href="mailto:rasekhb@uwindsor.ca" class="text-textDark hover:text-textGreen transition-colors">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class=" overflow-x-hidden">
+    <!-- Banner -->
+    <section id="home" class="min-h-screen flex flex-col justify-center max-w-4xl mx-auto px-6 py-24 md:px-10 lg:gap-6">
+      <p class="font-code text-sm md:text-base tracking-wide text-textGreen">Hello World, my name is</p>
+      <h1 class="font-title text-3xl md:text-5xl lg:text-6xl font-semibold text-textLight">
+        Bardiya (Brad).
+      </h1>
+      <h2 class="font-title text-2xl md:text-3xl lg:text-4xl text-textDark mt-2">
+        AI/ML Engineer & Researcher
+      </h2>
+      <p class="max-w-2xl mt-4 text-sm md:text-base text-textDark leading-relaxed">
+        AI/ML Engineer with 6+ years of experience in machine learning, computer vision, and generative AI, with a focus on AI, LLM, and CV applications in the medical, industrial, and financial sectors. 
+      </p>
+      <p class="max-w-2xl mt-2 text-sm text-textDark italic">
+        Master's in Computer Science (AI Stream) endorsed by the Vector Institute. Fully committed to the philosophy of lifelong learning.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#projects" class="inline-flex h-12 w-44 items-center justify-center rounded-md border border-textGreen font-title text-sm tracking-wide text-textGreen transition-colors hover:bg-hoverColor">
+          View Projects
+        </a>
+        <a href="Bardiya-Brad-Resume.pdf" download class="inline-flex h-12 w-44 items-center justify-center rounded-md border border-textGreen font-title text-sm tracking-wide text-textGreen transition-colors hover:bg-hoverColor">
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="min-h-screen flex flex-col justify-center max-w-container mx-auto px-6 py-24 md:px-10 lg:py-32">
+      <div class="flex items-center gap-4">
+        <h2 class="font-title text-2xl font-semibold flex items-center">
+          <span class="text-textGreen text-lg mr-2">01.</span> About me
+          <span class="hidden md:inline-flex ml-6 h-px w-48 lg:w-72 bg-gray-700"></span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 mt-6 items-start">
+        <div class="space-y-4 text-base text-textDark">
+          <div class="flex gap-4 md:block">
+            <img src="profile_picture.jpg" alt="Bardiya (Brad) - Profile" class="float-right md:float-none w-24 h-24 md:w-48 md:h-48 rounded-full border-2 border-textGreen object-cover mb-4 md:mb-0 md:ml-6">
+            <p class="mt-4">
+              Hello there, I'm an <span class="text-textGreen">AI/ML Engineer & Researcher</span>. 
+              Based in Canada, I specialize in machine learning, computer vision, and generative AI applications.
+            </p>
+          </div>
+          <p>
+            I have <span class="text-textGreen">6+ years</span> of experience in the tech industry, with expertise in 
+            <span class="text-textGreen">AI</span>, <span class="text-textGreen">Machine Learning</span>,
+            <span class="text-textGreen">Deep Learning</span>, <span class="text-textGreen">Computer Vision</span>,
+            <span class="text-textGreen">LLM</span>, <span class="text-textGreen">medical imaging</span>, 
+            and <span class="text-textGreen">intelligent systems</span>. As an AI Engineer and Researcher, I have developed impactful AI applications to solve real-world industrial, medical, and financial problems. 
+            I also authored a research paper in medical imaging, achieving 95.50% classification accuracy.
+          </p>
+          <p>
+            My work spans <span class="text-textGreen">Optimotive</span>, <span class="text-textGreen">University of Windsor</span>, 
+            and industrial AI applications. I'm passionate about building systems that make a real impact.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div>
+            <p class="font-code text-sm font-bold text-textDark mb-3">Technical Skills</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">Python</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">TensorFlow</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">PyTorch</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">LLMs</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">Computer Vision</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">YOLO</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">Vision Transformers</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">DVC</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">MLOps</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">SQL</span>
+              <span class="px-3 py-1 rounded bg-cardBg/50 text-textGreen text-sm">C++</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="min-h-screen flex flex-col justify-center max-w-container mx-auto px-6 py-24 lg:py-32">
+      <h2 class="font-title text-2xl font-semibold flex items-center">
+        <span class="text-textGreen text-lg mr-2">02.</span> Where I've Worked
+        <span class="hidden md:inline-flex ml-6 h-px w-48 lg:w-72 bg-gray-700"></span>
+      </h2>
+      <div class="mt-12 flex flex-col sm:flex-row gap-6">
+        <div class="flex sm:flex-col border-l-2 border-textDark/30 min-w-fit">
+          <button data-tab="optimotive" class="experience-tab active -ml-[2px] border-l-2 border-textGreen pl-6 pr-8 py-3 text-left text-sm font-medium text-textGreen bg-hoverColor/30 transition-colors">
+            Optimotive
+          </button>
+          <button data-tab="uwindsor" class="experience-tab -ml-[2px] border-l-2 border-transparent pl-6 pr-8 py-3 text-left text-sm font-medium text-textDark hover:bg-hoverColor hover:text-textGreen transition-colors">
+            U of Windsor
+          </button>
+          <button data-tab="sadra" class="experience-tab -ml-[2px] border-l-2 border-transparent pl-6 pr-8 py-3 text-left text-sm font-medium text-textDark hover:bg-hoverColor hover:text-textGreen transition-colors">
+            Sadra Palayesh
+          </button>
+          <button data-tab="azad" class="experience-tab -ml-[2px] border-l-2 border-transparent pl-6 pr-8 py-3 text-left text-sm font-medium text-textDark hover:bg-hoverColor hover:text-textGreen transition-colors">
+            Azad University
+          </button>
+        </div>
+        <div class="flex-1">
+          <div id="optimotive-content" class="experience-content">
+            <h3 class="font-title text-xl font-medium">AI/ML Engineer (Part-Time)</h3>
+            <p class="text-textGreen text-sm mt-1">@ Optimotive · Canada</p>
+            <p class="text-textDark text-sm mt-2">Jun 2025 – Present</p>
+            <ul class="mt-4 space-y-3 text-textDark text-sm">
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Developed GUI-based Auto Annotation Application, achieving 85% reduction in manual annotation time</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Implemented DVC-based Image Versioning System, reducing data preparation time by 90%</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Enhanced customer support with open-source LLM adaptation (LoRA), 92% satisfaction, 80% wait reduction</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Optimized robotic navigation with real-time vision (43 FPS, >98% accuracy) and satellite path planning</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Built real-time 3D object detection (YOLOv11 + Depth Anything v2) for spatial perception</li>
+            </ul>
+          </div>
+          <div id="uwindsor-content" class="experience-content hidden">
+            <h3 class="font-title text-xl font-medium">AI/ML Researcher</h3>
+            <p class="text-textGreen text-sm mt-1">@ University of Windsor (Bioinformatics Lab)</p>
+            <p class="text-textDark text-sm mt-2">Jan 2025 – Present</p>
+            <ul class="mt-4 space-y-3 text-textDark text-sm">
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Fine-tuned medical reasoning LLM for diagnostic/treatment support, improving domain reasoning by 10-15%</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Authored paper: Hypergraph-Augmented Vision Transformers for Bone Tumor Subtype Classification</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Engineered hybrid deep learning: ViT + Graph/Hypergraph NNs, 17% accuracy increase over CNNs</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Developed custom fusion layers for global ViT embeddings + higher-order structural relationships</li>
+            </ul>
+          </div>
+          <div id="sadra-content" class="experience-content hidden">
+            <h3 class="font-title text-xl font-medium">AI/ML Engineer</h3>
+            <p class="text-textGreen text-sm mt-1">@ Sadra Palayesh (SPJ) · Iran</p>
+            <p class="text-textDark text-sm mt-2">Mar 2023 – Jan 2025</p>
+            <ul class="mt-4 space-y-3 text-textDark text-sm">
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Engineered CV pipeline for real-time heavy vehicle detection & OCR (98% detection, 83% violation reduction)</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Built intelligent traffic management system, reducing vehicle wait times by ~30%</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Developed Customer Churn Prediction & CLV models (XGBoost/LightGBM), $500K-$700K incremental revenue</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Implemented Drowsiness/Fatigue Detection (Haar cascades + CNNs), reducing accidents by 8%</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Designed Real-Time Face Recognition (One-Shot Learning, DeepFace), 80% enrolment overhead reduction</li>
+            </ul>
+          </div>
+          <div id="azad-content" class="experience-content hidden">
+            <h3 class="font-title text-xl font-medium">AI/ML Researcher</h3>
+            <p class="text-textGreen text-sm mt-1">@ Azad University (Bioinformatics Lab)</p>
+            <p class="text-textDark text-sm mt-2">Sep 2021 – Mar 2023</p>
+            <ul class="mt-4 space-y-3 text-textDark text-sm">
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Deployed AI diagnostic platform (YOLO + CNN) across 10+ clinics, impacting 2000+ patients</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Developed automated lung tumor segmentation, 70% reduction in manual measurement time</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Built biomarker detector for Type 2 Diabetes, 76% improvement in early-stage detection</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Optimized medical imaging pipeline, 23% increase in high-fidelity mask generation</li>
+              <li class="flex gap-3"><span class="text-textGreen mt-1">▹</span> Engineered athlete pose-estimation tool exporting to OpenSim-compatible formats</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-container mx-auto px-6 py-24 lg:py-32">
+      <h2 class="font-title text-2xl font-semibold flex items-center">
+        <span class="text-textGreen text-lg mr-2">03.</span> Projects
+        <span class="hidden md:inline-flex ml-6 h-px w-48 lg:w-72 bg-gray-700"></span>
+      </h2>
+      <div class="mt-16 space-y-24">
+        <!-- Featured Project 1 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <p class="font-code text-sm text-textGreen mb-2">Featured Project</p>
+            <h3 class="font-title text-2xl font-bold text-textLight hover:text-textGreen transition-colors">Hypergraph-Augmented Vision Transformers</h3>
+            <div class="mt-4 rounded-lg bg-cardBg p-6 text-textDark text-sm">
+              Hybrid deep learning architecture integrating Vision Transformers with Graph/Hypergraph Neural Networks for fine-grained bone tumor subtype classification. Achieved 95.50% accuracy with stratified K-fold validation and ensemble modeling.
+            </div>
+            <ul class="mt-4 flex flex-wrap gap-4 font-code text-xs text-textGreen">
+              <li>Vision Transformers</li>
+              <li>Hypergraph GNN</li>
+              <li>PyTorch</li>
+              <li>Medical Imaging</li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="rounded-lg bg-cardBg/50 border border-textDark/30 p-8 flex items-center justify-center min-h-[200px]">
+              <i data-lucide="brain" class="w-24 h-24 text-textGreen/50"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Project 2 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="rounded-lg bg-cardBg/50 border border-textDark/30 p-8 flex items-center justify-center min-h-[200px]">
+              <i data-lucide="message-circle" class="w-24 h-24 text-textGreen/50"></i>
+            </div>
+          </div>
+          <div>
+            <p class="font-code text-sm text-textGreen mb-2">Featured Project</p>
+            <h3 class="font-title text-2xl font-bold text-textLight hover:text-textGreen transition-colors">LLM-Based Customer Support</h3>
+            <div class="mt-4 rounded-lg bg-cardBg p-6 text-textDark text-sm">
+              Enhanced customer support system by adapting an open-source LLM using LoRA fine-tuning. Achieved 92% customer satisfaction rate and 80% reduction in waiting periods. Integrated into MLOps pipeline.
+            </div>
+            <ul class="mt-4 flex flex-wrap gap-4 font-code text-xs text-textGreen">
+              <li>LLM</li>
+              <li>LoRA</li>
+              <li>Python</li>
+              <li>MLOps</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Featured Project 3 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <p class="font-code text-sm text-textGreen mb-2">Featured Project</p>
+            <h3 class="font-title text-2xl font-bold text-textLight hover:text-textGreen transition-colors">Auto Annotator</h3>
+            <div class="mt-4 rounded-lg bg-cardBg p-6 text-textDark text-sm">
+              GUI-based tool for streamlined labeling and annotation workflows. Achieved 85% reduction in manual annotation time at Optimotive, accelerating dataset preparation for computer vision models.
+            </div>
+            <ul class="mt-4 flex flex-wrap gap-4 font-code text-xs text-textGreen">
+              <li>Python</li>
+              <li>GUI</li>
+              <li>Computer Vision</li>
+              <li>YOLO</li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="rounded-lg bg-cardBg/50 border border-textDark/30 p-8 flex items-center justify-center min-h-[200px]">
+              <i data-lucide="tags" class="w-24 h-24 text-textGreen/50"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Featured Project 4 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="rounded-lg bg-cardBg/50 border border-textDark/30 p-8 flex items-center justify-center min-h-[200px]">
+              <i data-lucide="truck" class="w-24 h-24 text-textGreen/50"></i>
+            </div>
+          </div>
+          <div>
+            <p class="font-code text-sm text-textGreen mb-2">Featured Project</p>
+            <h3 class="font-title text-2xl font-bold text-textLight hover:text-textGreen transition-colors">Heavy Vehicle Detection & OCR</h3>
+            <div class="mt-4 rounded-lg bg-cardBg p-6 text-textDark text-sm">
+              Computer vision pipeline for intelligent traffic systems (ITS). Achieved 98% detection accuracy and 83% violation rate reduction. Real-time heavy vehicle identification and license plate OCR at Sadra Palayesh.
+            </div>
+            <ul class="mt-4 flex flex-wrap gap-4 font-code text-xs text-textGreen">
+              <li>Computer Vision</li>
+              <li>OCR</li>
+              <li>YOLO</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Featured Project 5 -->
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="order-2 md:order-1">
+            <p class="font-code text-sm text-textGreen mb-2">Featured Project</p>
+            <h3 class="font-title text-2xl font-bold text-textLight hover:text-textGreen transition-colors">Robotic Inspection & Fault Diagnosis</h3>
+            <div class="mt-4 rounded-lg bg-cardBg p-6 text-textDark text-sm">
+              Thermal vision system for solar panel hotspot detection and automated barcode decoding. Achieved 65% faster fault identification. Deployed for robotic inspection workflows at Optimotive.
+            </div>
+            <ul class="mt-4 flex flex-wrap gap-4 font-code text-xs text-textGreen">
+              <li>Thermal Vision</li>
+              <li>Computer Vision</li>
+              <li>Robotics</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="order-1 md:order-2">
+            <div class="rounded-lg bg-cardBg/50 border border-textDark/30 p-8 flex items-center justify-center min-h-[200px]">
+              <i data-lucide="search" class="w-24 h-24 text-textGreen/50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Noteworthy Projects -->
+      <div class="mt-24">
+        <h3 class="font-title text-xl font-semibold text-textLight mb-8">Other Noteworthy Projects</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">DVC-based Image Versioning System</h4>
+            <p>Data pre-processor reducing data preparation time by 90%, 100% dataset consistency (Optimotive)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Real-Time 3D Object Detection</h4>
+            <p>YOLOv11 + Depth Anything v2 for pseudo-3D bounding boxes and bird's-eye view; robotic spatial perception (Optimotive)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">MCAP-to-Frames Converter</h4>
+            <p>Image transformation pipeline, 43% improvement in OCR accuracy (Optimotive)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Dataset Splitter/Visualizer</h4>
+            <p>YOLO-compatible directory structures and segmentation mask overlays (Optimotive)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Autonomous Navigation</h4>
+            <p>Real-time vision (43 FPS, >98% accuracy) and satellite path planning under 5 seconds (Optimotive)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Medical Reasoning LLM</h4>
+            <p>Fine-tuned for diagnostic/treatment support and patient summarization, 10-15% improvement (U of Windsor)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Intelligent Traffic Management</h4>
+            <p>Real-time vehicle flow analysis, light-timing adjustments, ~30% wait time reduction (Sadra Palayesh)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Customer Churn & CLV Models</h4>
+            <p>XGBoost/LightGBM predictive analytics, $500K-$700K incremental revenue (Sadra Palayesh)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Drowsiness & Fatigue Detection</h4>
+            <p>Haar cascades + CNNs with audio alerts, 8% accident reduction (Sadra Palayesh)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Real-Time Face Recognition</h4>
+            <p>One-Shot Learning and DeepFace, 80% enrolment overhead reduction (Sadra Palayesh)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Emotion Analyzer</h4>
+            <p>User engagement monitoring, vision results synced to SQL databases, 100% data integrity (Sadra Palayesh)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">AI Diagnostic Platform</h4>
+            <p>YOLO + CNN models across 10+ clinics, 2000+ patients impacted (Azad University)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Lung Cancer Tumor Segmentation</h4>
+            <p>Automated segmentation, 70% reduction in manual measurement time for radiologists (Azad University)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Type 2 Diabetes Biomarker Detector</h4>
+            <p>Segmenter for early-stage detection, 76% improvement (Azad University)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Medical Imaging Pipeline</h4>
+            <p>CT/MRI pre-processing optimization, 23% increase in high-fidelity mask generation (Azad University)</p>
+          </div>
+          <div class="rounded-lg bg-cardBg p-5 text-textDark text-sm hover:border-textGreen/30 border border-transparent transition-colors">
+            <h4 class="font-title font-medium text-textLight mb-2">Athlete Posture Analyzer</h4>
+            <p>Pose-estimation for 2D joint positions, flexion angles, OpenSim-compatible export (Azad University)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-2xl mx-auto px-6 py-24 lg:py-32 text-center">
+      <p class="font-code text-lg font-semibold text-textGreen tracking-wide">04. What's Next?</p>
+      <h2 class="font-title text-2xl md:text-4xl font-semibold mt-2">Let's Get In Touch</h2>
+      <p class="mt-4 text-textDark">
+        My inbox is always open for new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!
+      </p>
+      <a href="mailto:rasekhb@uwindsor.ca" class="inline-flex mt-8 h-14 w-40 items-center justify-center rounded-md border border-textGreen font-title text-sm tracking-wider text-textGreen transition-colors hover:bg-hoverColor">
+        Say Hello
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center">
+      <div class="flex justify-center gap-6 mb-4">
+        <a href="https://github.com" target="_blank" rel="noreferrer" class="text-textDark hover:text-textGreen transition-colors">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="text-textDark hover:text-textGreen transition-colors">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="mailto:rasekhb@uwindsor.ca" class="text-textDark hover:text-textGreen transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
+      <p class="text-xs text-textDark">
+        Built with HTML, Tailwind CSS & Lucide. Designed by Bardiya (Brad).
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuClose = document.getElementById('menu-close');
+    const menuBackdrop = document.getElementById('menu-backdrop');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => lucide.createIcons(), 0);
+    }
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    menuClose?.addEventListener('click', closeMenu);
+    menuBackdrop?.addEventListener('click', closeMenu);
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Experience tabs
+    document.querySelectorAll('.experience-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.experience-tab').forEach(t => {
+          t.classList.remove('active', 'border-textGreen', 'text-textGreen', 'bg-hoverColor/30');
+          t.classList.add('border-transparent', 'text-textDark');
+        });
+        document.querySelectorAll('.experience-content').forEach(c => c.classList.add('hidden'));
+        tab.classList.add('active', 'border-textGreen', 'text-textGreen', 'bg-hoverColor/30');
+        tab.classList.remove('border-transparent', 'text-textDark');
+        const id = tab.dataset.tab + '-content';
+        document.getElementById(id)?.classList.remove('hidden');
+      });
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html> 
